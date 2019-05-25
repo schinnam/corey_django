@@ -1,0 +1,34 @@
+25 May 2019
+
+- Install django 
+pip install django==2.1
+python -m django --version
+
+- 
+django-admin 
+django-admin start project antinationalist
+
+.
+├── antinationalist
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── manage.py
+└── notes.txt
+
+manage.py --> supports django-admin commands and running server.
+__init__.py --> just to say this is a python project. This file is not required when creating pip package.
+settings.py --> settings for the app
+urls.py --> here we decide the routes and the corresponding code to run
+wsgi.py --> wsgi decides how our python web application and web server communicate
+
+* Now we already have everything needed to run a basic django project. 
+python manage.py runserver
+
+http://127.0.0.1:8000/
+http://127.0.0.1:8000/admin/
+This admin page is being handled by route mentioned in urls.py 
+
+* with debug=true in settings, our changes should automatically reflect in the page without reloading the server.
+* 
