@@ -62,3 +62,11 @@ python manage.py startapp blog  OR django-admin startapp blog
 ├── db.sqlite3
 ├── manage.py
 └── notes.txt
+
+----------
+Video 3:
+* We create templates folder in each app where we  store templates.
+* For Django to detect these templates we needed to add appconfig to project settings.
+* Get used to adding apps to INSTALLED_APPS in settings.
+
+* bootstrap is an extremely popular library that makes it easy to add nice styling to the website.
