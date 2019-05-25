@@ -31,4 +31,34 @@ http://127.0.0.1:8000/admin/
 This admin page is being handled by route mentioned in urls.py 
 
 * with debug=true in settings, our changes should automatically reflect in the page without reloading the server.
-* 
+
+---------
+Video 2:
+* antinationalist is the project, within project we can have multiple apps. We will start with blog app.
+* Same app can be used in multiple projects.
+
+python manage.py startapp blog  OR django-admin startapp blog 
+
+.
+├── antinationalist
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-37.pyc
+│   │   ├── settings.cpython-37.pyc
+│   │   ├── urls.cpython-37.pyc
+│   │   └── wsgi.cpython-37.pyc
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── blog
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+├── db.sqlite3
+├── manage.py
+└── notes.txt
