@@ -70,3 +70,70 @@ Video 3:
 * Get used to adding apps to INSTALLED_APPS in settings.
 
 * bootstrap is an extremely popular library that makes it easy to add nice styling to the website.
+
+
+----------
+Video 4:
+Admin page 
+python manage.py makemigrations
+Above commands will show no changes detected, since we dont have DB changes or models.
+makemigrations detects changes and prepares django to update the database.
+In order to apply migrations run -> python manage.py migrate
+    - Apply all migrations: admin, auth, contenttypes, sessions
+
+python manage.py createsuper
+user:schinna email:shivakumar.chinnam@gmail.com pass:MyBlog
+
+created another using using admin page this time.
+user: TestUser pass: KeepUsing
+
+------------
+Video 5:
+Connection to Databases. Python django comes with in-built ORM?
+We can work with one DB in dev and another in prod without changing much of the code.
+ORM - Object Relational Mapper : Allows to access DB in a easy to use object oriented way.
+We can represent our DB structure as classes. Classes called models?
+Models created in models.py become tables in database. Once a class is created in models.py run 
+    python manage.py makemigrations --> for generating migrations, this will create a py file in migrations folder.
+    python manage.py sqlmigrate blog 0001 --> to show SQL queries that will be run for our model.
+    python manage.py migrate --> to do migration , make changes to DB.
+
+Django also provides way to interct witht the DB. SQL here:
+    python manage.py shell
+    from blog.models import Post 
+    from django.contrib.auth.models import User
+    
+    
+    User.objects.all()
+    User.objects.first()
+    User.objects.last()
+    User.objects.filter(username='TestUser')
+    User.objects.filter(username='TestUser').first()
+    user = User.objects.filter(username='TestUser').first()
+    user 
+    user.id 
+    user.pk 
+    user = User.objects.get(id=1)
+    
+    Post.objects.all()
+    post_1 = Post(title='Blog 1', content='First Post content', author=user)
+    Post.objects.all()
+    post_1.save()
+    Post.objects.all()
+    exit()
+
+python manage.py shell 
+from blog.models import Post 
+from djabgo.contrib.auth.models import User 
+    user = User.objects.filter(username='TestUser').first()
+    user 
+    post_2 = Post(title='Blog2', content='Second Post Content, author=user)
+    post_2.save()
+
+    post.objects.all()
+    user.post_set  --> Gets all the post by the user 
+    user.post_set.all()
+    user.post_set.create(title='Blog 3', content='Third post content') --> will create post for that user.
+    exit()
+
+Register models in Admin page for them to showup.
