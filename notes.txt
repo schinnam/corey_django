@@ -137,3 +137,6 @@ from djabgo.contrib.auth.models import User
     exit()
 
 Register models in Admin page for them to showup.
+
+--------------
+Video 6:
