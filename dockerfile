@@ -20,3 +20,6 @@ CMD exec gunicorn antinationalist.wsgi:application --bind 0.0.0.0:8000 --workers
 # CMD ["python", "-m", "http.server", "8000"]
 
 # CMD ["python","testpro/manage.py","runserver"]
+
+# docker run --rm -it -p 8000:8000 corey_basic:latest
+# docker build -t corey_basic:latest .
